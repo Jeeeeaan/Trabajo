@@ -1,0 +1,58 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ImageCollection",
+					"_Name": "SectionImageCollection0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ImageCells": [
+						{
+							"ImageCell": {
+								"_Name": "SectionImageCellmaquinaria",
+								"Title": "Maquinaria",
+								"Image": "/GTAProyect/Images/maquina (1).png",
+								"ImageIsCircular": false,
+								"Visible": true,
+								"OnPress": "/GTAProyect/Actions/MobilGTA/maquinaria/NavTomaquinaria_List.action"
+							}
+						},
+						{
+							"ImageCell": {
+								"_Name": "SectionImageCellVehiculo",
+								"Title": "Vehículos",
+								"Image": "/GTAProyect/Images/carro (2).png",
+								"ImageIsCircular": false,
+								"Visible": true,
+								"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NavToplacas_List.action"
+							}
+						}
+					],
+					"Layout": {
+						"LayoutType": "HorizontalFit"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Preoperacional",
+	"Caption": "Pre Operacional",
+	"PrefersLargeCaption": true
+}

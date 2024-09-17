@@ -1,0 +1,23 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "motor"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"fuga_aceite": "#Control:fuga_aceite/#SelectedValue",
+		"ruido_motor": "#Control:ruido_motor/#SelectedValue",
+		"desajuste": "#Control:desajuste/#SelectedValue",
+		"exeso_humo": "#Control:exeso_humo/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value",
+		"placa_placa": "#Control:placa_placa/#SelectedValue"
+	}
+}

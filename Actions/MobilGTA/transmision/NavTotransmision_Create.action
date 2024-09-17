@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavTotransmision_Create"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_transmision/transmision_Create.page"
+}

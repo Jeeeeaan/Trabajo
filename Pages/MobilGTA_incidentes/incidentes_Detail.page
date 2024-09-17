@@ -1,0 +1,96 @@
+{
+	"Caption": "$(L,incidentes_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "incidentes",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/incidentes/NavToincidentes_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/incidentes/incidentes_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{tipo}",
+						"BodyText": "",
+						"Footnote": "{fecha_inicio}",
+						"Description": "{contacto}",
+						"StatusText": "{fecha_fin}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{ubicacion}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "tipo",
+							"Value": "{tipo}"
+						},
+						{
+							"KeyName": "contacto",
+							"Value": "{contacto}"
+						},
+						{
+							"KeyName": "fecha_inicio",
+							"Value": "{fecha_inicio}"
+						},
+						{
+							"KeyName": "fecha_fin",
+							"Value": "{fecha_fin}"
+						},
+						{
+							"KeyName": "ubicacion",
+							"Value": "{ubicacion}"
+						},
+						{
+							"KeyName": "ciudad",
+							"Value": "{ciudad}"
+						},
+						{
+							"KeyName": "observaciones",
+							"Value": "{observaciones}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "incidentes_Detail",
+	"PrefersLargeCaption": true
+}

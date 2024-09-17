@@ -1,0 +1,24 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "combustible",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "horometro": "#Control:horometro/#Value",
+        "kilometraje": "#Control:kilometraje/#Value",
+        "cantidad": "#Control:cantidad/#Value",
+        "numero_vale": "#Control:numero_vale/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "observaciones": "#Control:observaciones/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}

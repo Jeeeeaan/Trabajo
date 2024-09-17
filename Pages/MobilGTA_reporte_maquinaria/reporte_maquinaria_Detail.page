@@ -1,0 +1,100 @@
+{
+	"Caption": "$(L,reporte_maquinaria_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "reporte_maquinaria",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/reporte_maquinaria/NavToreporte_maquinaria_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/reporte_maquinaria/reporte_maquinaria_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{fecha}",
+						"BodyText": "",
+						"Footnote": "{motor}",
+						"Description": "{cabina}",
+						"StatusText": "{pluma}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{brazo}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "fecha",
+							"Value": "{fecha}"
+						},
+						{
+							"KeyName": "cabina",
+							"Value": "{cabina}"
+						},
+						{
+							"KeyName": "motor",
+							"Value": "{motor}"
+						},
+						{
+							"KeyName": "pluma",
+							"Value": "{pluma}"
+						},
+						{
+							"KeyName": "brazo",
+							"Value": "{brazo}"
+						},
+						{
+							"KeyName": "cucharon",
+							"Value": "{cucharon}"
+						},
+						{
+							"KeyName": "estabilizador",
+							"Value": "{estabilizador}"
+						},
+						{
+							"KeyName": "cilindro",
+							"Value": "{cilindro}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "reporte_maquinaria_Detail",
+	"PrefersLargeCaption": true
+}

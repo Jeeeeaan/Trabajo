@@ -1,0 +1,24 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "update"
+	},
+	"OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "electrico",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"corto": "#Control:corto/#SelectedValue",
+		"pastas_rotas": "#Control:pastas_rotas/#SelectedValue",
+		"plumillas": "#Control:plumillas/#SelectedValue",
+		"Bateria": "#Control:bateria/#SelectedValue",
+		"pito": "#Control:pito/#SelectedValue",
+		"luces": "#Control:luces/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value"
+	}
+}

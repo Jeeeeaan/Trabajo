@@ -1,0 +1,337 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ID",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "N° Reporte",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "placa_placa",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Placa",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"DisplayValue": "{placa}",
+								"ReturnValue": "{placa}",
+								"Target": {
+									"EntitySet": "placas",
+									"Service": "/GTAProyect/Services/MobilGTA.service"
+								}
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "fecha_inicio",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Fecha",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "kilometraje_actual",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "kilometraje Actual",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "nombre_funcionario",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Funcionario",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ubicacion",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Ubicación",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ciudad",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Ciudad",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "aceite",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Aceite",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "refrigerante",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Refrigerante",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "combustible",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Combustible",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "luz_delantera",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Luz Delantera",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "luz_trasera",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Luz Trasera",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "llantas",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Llantas",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "cinturon_seguridad",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Cinturón de seguridad",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "equipo_carretera",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Equipo de carretera",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "freno_parqueo",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Freno de parqueo",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "frenos",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Frenos",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "vidrios",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Vidrios",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "carretera_kit",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Kit de carretera",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bueno",
+								"Malo",
+								"N/A"
+							]
+						},
+						{
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "ESTADO DEL VEHÍCULO"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "reporte_Create",
+	"Caption": "Crear  Reporte",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/reporte/reporte_CreateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

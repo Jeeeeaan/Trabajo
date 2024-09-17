@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnFailure": "/GTAProyect/Actions/MobilGTA/Service/SyncFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/MobilGTA/Service/UploadOffline.action",
+	"Message": "Carga en curso...",
+	"CompletionMessage": "Sincronización completada",
+	"CompletionTimeout": 7
+}

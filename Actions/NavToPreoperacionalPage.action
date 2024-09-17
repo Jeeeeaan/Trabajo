@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToPreoperacionalPage"
+	},
+	"PageToOpen": "/GTAProyect/Pages/Preoperacional.page"
+}

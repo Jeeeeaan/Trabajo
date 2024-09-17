@@ -1,0 +1,30 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "placas",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "placa": "#Control:placa/#SelectedValue",
+        "numero_interno": "#Control:numero_interno/#Value",
+        "fecha_inicio": "#Control:fecha_inicio/#Value",
+        "fecha_final": "#Control:fecha_final/#Value",
+        "kilometraje_inicial": "#Control:kilometraje_inicial/#Value",
+        "kilometraje_final": "#Control:kilometraje_final/#Value",
+        "color": "#Control:color/#Value",
+        "tipo_motor": "#Control:tipo_motor/#Value",
+        "tipo_servicio": "#Control:tipo_servicio/#Value",
+        "marca": "#Control:marca/#Value",
+        "modelo": "#Control:modelo/#Value",
+        "linea": "#Control:linea/#Value",
+        "observaciones": "#Control:observaciones/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,35 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "reporte",
+		"Service": "/GTAProyect/Services/MobilGTA.service"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"fecha_inicio": "#Control:fecha_inicio/#Value",
+		"kilometraje_actual": "#Control:kilometraje_actual/#Value",
+		"nombre_funcionario": "#Control:nombre_funcionario/#Value",
+		"ubicacion": "#Control:ubicacion/#Value",
+		"ciudad": "#Control:ciudad/#Value",
+		"aceite": "#Control:aceite/#SelectedValue",
+		"refrigerante": "#Control:refrigerante/#SelectedValue",
+		"combustible": "#Control:combustible/#SelectedValue",
+		"luz_delantera": "#Control:luz_delantera/#SelectedValue",
+		"luz_trasera": "#Control:luz_trasera/#SelectedValue",
+		"llantas": "#Control:llantas/#SelectedValue",
+		"cinturon_seguridad": "#Control:cinturon_seguridad/#SelectedValue",
+		"equipo_carretera": "#Control:equipo_carretera/#SelectedValue",
+		"freno_parqueo": "#Control:freno_parqueo/#SelectedValue",
+		"frenos": "#Control:frenos/#SelectedValue",
+		"vidrios": "#Control:vidrios/#SelectedValue",
+		"carretera_kit": "#Control:carretera_kit/#SelectedValue",
+		"adjunto": "#Control:adjunto/#ClientData",
+		"status": "#Control:status/#Value",
+		"placa_placa": "#Control:placa_placa/#SelectedValue"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnSuccess": "/GTAProyect/Actions/MobilGTA/Service/DownloadOffline.action",
+	"Message": "Descarga en curso...",
+	"CompletionMessage": "Descarga correcta",
+	"CompletionTimeout": 7
+}

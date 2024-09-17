@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.PopoverMenu",
+	"PopoverItems": [
+		{
+			"Title": "Crear Reporte",
+			"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NavToplacas_Createreporte.action"
+		},
+		{
+			"Title": "Reportar Falla",
+			"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NavToSelectfallas.action"
+		},
+		{
+			"Title": "Borrar",
+			"OnPress": "/GTAProyect/Rules/MobilGTA/placas/placas_DeleteConfirmation.js"
+		}
+	]
+}

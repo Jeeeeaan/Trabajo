@@ -1,0 +1,155 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "actividades",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{sitio_cargue}",
+						"Footnote": "{peaje}",
+						"Description": "{sitio_cargue}",
+						"StatusText": "{hora_inicio}",
+						"SubstatusText": "{sitio_descargue}",
+						"HeadlineText": "{ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "ID",
+							"Visible": true
+						},
+						{
+							"Value": "{tipo}",
+							"_Name": "KeyValue1",
+							"KeyName": "tipo",
+							"Visible": true
+						},
+						{
+							"Value": "{hora_inicio}",
+							"_Name": "KeyValue2",
+							"KeyName": "hora_inicio",
+							"Visible": true
+						},
+						{
+							"Value": "{hora_fin}",
+							"_Name": "KeyValue3",
+							"KeyName": "hora_fin",
+							"Visible": true
+						},
+						{
+							"Value": "{peaje}",
+							"_Name": "KeyValue4",
+							"KeyName": "proyecto",
+							"Visible": true
+						},
+						{
+							"Value": "{sitio_cargue}",
+							"_Name": "KeyValue5",
+							"KeyName": "sitio_cargue",
+							"Visible": true
+						},
+						{
+							"Value": "{sitio_descargue}",
+							"_Name": "KeyValue6",
+							"KeyName": "sitio_descargue",
+							"Visible": true
+						},
+						{
+							"Value": "{vale_interno}",
+							"_Name": "KeyValue7",
+							"KeyName": "vale_interno",
+							"Visible": true
+						},
+						{
+							"Value": "{vale_proovedor}",
+							"_Name": "KeyValue8",
+							"KeyName": "vale_proovedor",
+							"Visible": true
+						},
+						{
+							"Value": "{peaje}",
+							"_Name": "KeyValue9",
+							"KeyName": "peaje",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue10",
+							"KeyName": "status",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Caption"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "actividad_detail",
+	"Caption": "Detalles",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/actividades/NavToactividades_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Reportar",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/personal/NavTopersonal_List.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

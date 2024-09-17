@@ -1,0 +1,100 @@
+{
+	"Caption": "$(L,conductor_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "conductor",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/conductor/NavToconductor_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/conductor/conductor_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{documento}",
+						"Subhead": "{nombre}",
+						"BodyText": "",
+						"Footnote": "{telefono}",
+						"Description": "{apellido}",
+						"StatusText": "{email}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{direccion}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "documento",
+							"Value": "{documento}"
+						},
+						{
+							"KeyName": "nombre",
+							"Value": "{nombre}"
+						},
+						{
+							"KeyName": "apellido",
+							"Value": "{apellido}"
+						},
+						{
+							"KeyName": "telefono",
+							"Value": "{telefono}"
+						},
+						{
+							"KeyName": "email",
+							"Value": "{email}"
+						},
+						{
+							"KeyName": "direccion",
+							"Value": "{direccion}"
+						},
+						{
+							"KeyName": "observacion",
+							"Value": "{observacion}"
+						},
+						{
+							"KeyName": "ciudad",
+							"Value": "{ciudad}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						},
+						{
+							"KeyName": "placa_placa",
+							"Value": "{placa_placa}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "conductor_Detail",
+	"PrefersLargeCaption": true
+}

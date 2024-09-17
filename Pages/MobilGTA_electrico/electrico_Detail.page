@@ -1,0 +1,123 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "electrico",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"fallas"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Placa: {placa_placa}",
+						"Footnote": "Daño: {dano}",
+						"DetailImage": "/GTAProyect/Images/electricoG.png",
+						"HeadlineText": "Falla N° {ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": " {ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Falla N°",
+							"Visible": true
+						},
+						{
+							"Value": "{dano}",
+							"_Name": "KeyValue1",
+							"KeyName": "Daño",
+							"Visible": true
+						},
+						{
+							"Value": "{placa_placa}",
+							"_Name": "KeyValue2",
+							"KeyName": "Placa",
+							"Visible": true
+						},
+						{
+							"Value": "{causa}",
+							"_Name": "KeyValue3",
+							"KeyName": "Causa",
+							"Visible": true
+						},
+						{
+							"Value": "{luces}",
+							"_Name": "KeyValue4",
+							"KeyName": "Luces",
+							"Visible": true
+						},
+						{
+							"Value": "{pito}",
+							"_Name": "KeyValue5",
+							"KeyName": "Pito",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue6",
+							"KeyName": "Estado",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "electrico_Detail",
+	"Caption": "Detalles Falla Eléctrica",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/NavToelectrico_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "More",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/electrico_DetailPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/GTAProyect/Services/MobilGTA.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/GTAProyect/Actions/MobilGTA/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/MobilGTA/Service/CloseOfflineFailureMessage.action"
+}

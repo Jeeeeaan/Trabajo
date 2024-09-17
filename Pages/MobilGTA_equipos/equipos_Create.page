@@ -1,0 +1,84 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action",
+				"Position": "Left",
+				"SystemItem": "Cancel"
+			},
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/equipos/equipos_CreateEntity.action",
+				"Position": "Right",
+				"SystemItem": "Save"
+			}
+		]
+	},
+	"Caption": "$(L,Create_equipos_Detail)",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "ID",
+							"KeyboardType": "Number",
+							"_Name": "ID",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "tipo",
+							"_Name": "tipo",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "marca",
+							"_Name": "marca",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Mode": "Date",
+							"_Name": "fecha",
+							"Caption": "fecha",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "contador",
+							"KeyboardType": "Number",
+							"_Name": "contador",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "tipo_elementos",
+							"_Name": "tipo_elementos",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "elementos_desgaste",
+							"_Name": "elementos_desgaste",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "proyecto",
+							"_Name": "proyecto",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "status",
+							"Caption": "status",
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "equipos_Create",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,22 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "suspension_UpdateEntity"
+	},
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "suspension",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"amortiguadores": "#Control: amortiguadores/#SelectedValue",
+		"hoja_muelle": "#Control:hoja_muelle/#SelectedValue",
+		"bujes_barra": "#Control:bujes_barra/#SelectedValue",
+		"tijeras": "#Control:tijeras/#SelectedValue",
+		"terminales": "#Control:terminales/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value"
+		
+	}
+}

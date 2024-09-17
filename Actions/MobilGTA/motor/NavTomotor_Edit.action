@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_motor/motor_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

@@ -1,0 +1,27 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.BottomNavigation",
+			"_Name": "BottomNavigation0",
+			"Items": [
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Inicio",
+					"Image": "/GTAProyect/Images/listaG.png",
+					"PageToOpen": "/GTAProyect/Pages/Main.page",
+					"_Name": "inicio"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Pre Operacional",
+					"Image": "/GTAProyect/Images/obreroG.png",
+					"PageToOpen": "/GTAProyect/Pages/Preoperacional.page",
+					"_Name": "TabItem0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Overview",
+	"Caption": "GTA Colombia "
+}

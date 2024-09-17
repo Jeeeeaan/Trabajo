@@ -1,0 +1,74 @@
+{
+	"Caption": "$(L,incidentes)",
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/incidentes/NavToincidentes_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false,
+						"_Type": "SectionCommon.Type.Header"
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{contacto}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/GTAProyect/Actions/MobilGTA/incidentes/NavToincidentes_Detail.action",
+						"StatusImage": "",
+						"Title": "{ID}",
+						"Footnote": "{fecha_inicio}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{fecha_fin}",
+						"Subhead": "{tipo}",
+						"SubstatusText": "{ubicacion}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "incidentes",
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "incidentes_List",
+	"PrefersLargeCaption": true
+}

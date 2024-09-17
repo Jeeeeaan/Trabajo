@@ -1,0 +1,161 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "motor",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{ID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ID",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Falla N°",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "fuga_aceite",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Fuga de aceite",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bajo",
+								"Mediano",
+								"En Exceso "
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "ruido_motor",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Fallas Motor",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bajo",
+								"Mediano",
+								"En Exceso "
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "desajuste",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Desajuste",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bajo",
+								"Mediano",
+								"En Exceso "
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "exeso_humo",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Exceso de humo",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Bajo",
+								"Mediano",
+								"En Exceso "
+							]
+						},
+						{
+							"Value": "{dano}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "dano",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Daño",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{causa}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "causa",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Causa",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "motor_Edit",
+	"Caption": "Editar Falla Motor",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/motor/motor_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,0 +1,103 @@
+{
+	"Caption": "$(L,Update_reporte_maquinaria_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "reporte_maquinaria",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"SystemItem": "Cancel",
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/GTAProyect/Actions/MobilGTA/reporte_maquinaria/reporte_maquinaria_UpdateEntity.action"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "ID",
+							"_Name": "ID",
+							"Value": "{ID}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Mode": "Date",
+							"_Name": "fecha",
+							"Value": "{fecha}",
+							"Caption": "fecha",
+							"_Type": "Control.Type.FormCell.DatePicker"
+						},
+						{
+							"Caption": "cabina",
+							"_Name": "cabina",
+							"Value": "{cabina}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "motor",
+							"_Name": "motor",
+							"Value": "{motor}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "pluma",
+							"_Name": "pluma",
+							"Value": "{pluma}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "brazo",
+							"_Name": "brazo",
+							"Value": "{brazo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "cucharon",
+							"_Name": "cucharon",
+							"Value": "{cucharon}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "estabilizador",
+							"_Name": "estabilizador",
+							"Value": "{estabilizador}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "cilindro",
+							"_Name": "cilindro",
+							"Value": "{cilindro}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "status",
+							"Caption": "status",
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "reporte_maquinaria_Edit",
+	"PrefersLargeCaption": true
+}

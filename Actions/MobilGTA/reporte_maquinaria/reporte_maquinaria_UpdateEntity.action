@@ -1,0 +1,26 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "reporte_maquinaria",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "fecha": "#Control:fecha/#Value",
+        "cabina": "#Control:cabina/#Value",
+        "motor": "#Control:motor/#Value",
+        "pluma": "#Control:pluma/#Value",
+        "brazo": "#Control:brazo/#Value",
+        "cucharon": "#Control:cucharon/#Value",
+        "estabilizador": "#Control:estabilizador/#Value",
+        "cilindro": "#Control:cilindro/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}

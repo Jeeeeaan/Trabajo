@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="CatalogService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="placas" EntityType="CatalogService.placas">
+                    <NavigationPropertyBinding Path="conductor" Target="conductor"/>
+                    <NavigationPropertyBinding Path="reporte" Target="reporte"/>
+                    <NavigationPropertyBinding Path="motor" Target="motor"/>
+                    <NavigationPropertyBinding Path="electrico" Target="electrico"/>
+                    <NavigationPropertyBinding Path="suspencion" Target="suspension"/>
+                    <NavigationPropertyBinding Path="transmision" Target="transmision"/>
+                </EntitySet>
+                <EntitySet Name="conductor" EntityType="CatalogService.conductor">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                    <NavigationPropertyBinding Path="reporte_maquinaria" Target="reporte_maquinaria"/>
+                    <NavigationPropertyBinding Path="maquinaria" Target="maquinaria"/>
+                </EntitySet>
+                <EntitySet Name="personal" EntityType="CatalogService.personal"/>
+                <EntitySet Name="proyectos" EntityType="CatalogService.proyectos"/>
+                <EntitySet Name="incidentes" EntityType="CatalogService.incidentes"/>
+                <EntitySet Name="responsables" EntityType="CatalogService.responsables"/>
+                <EntitySet Name="reporte" EntityType="CatalogService.reporte">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                </EntitySet>
+                <EntitySet Name="combustible" EntityType="CatalogService.combustible"/>
+                <EntitySet Name="fallas" EntityType="CatalogService.fallas">
+                    <NavigationPropertyBinding Path="maquinaria" Target="maquinaria"/>
+                </EntitySet>
+                <EntitySet Name="actividades" EntityType="CatalogService.actividades"/>
+                <EntitySet Name="equipos" EntityType="CatalogService.equipos"/>
+                <EntitySet Name="maquinaria" EntityType="CatalogService.maquinaria">
+                    <NavigationPropertyBinding Path="conductor" Target="conductor"/>
+                    <NavigationPropertyBinding Path="reporte_maquinaria" Target="reporte_maquinaria"/>
+                    <NavigationPropertyBinding Path="falla_maquinaria" Target="fallas"/>
+                </EntitySet>
+                <EntitySet Name="servicios" EntityType="CatalogService.servicios"/>
+                <EntitySet Name="repuestos" EntityType="CatalogService.repuestos"/>
+                <EntitySet Name="registro_tiempo" EntityType="CatalogService.registro_tiempo"/>
+                <EntitySet Name="registro_personal" EntityType="CatalogService.registro_personal"/>
+                <EntitySet Name="registro_maquinaria" EntityType="CatalogService.registro_maquinaria"/>
+                <EntitySet Name="reporte_maquinaria" EntityType="CatalogService.reporte_maquinaria">
+                    <NavigationPropertyBinding Path="maquinaria" Target="maquinaria"/>
+                    <NavigationPropertyBinding Path="conductor" Target="conductor"/>
+                </EntitySet>
+                <EntitySet Name="motor" EntityType="CatalogService.motor">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                </EntitySet>
+                <EntitySet Name="electrico" EntityType="CatalogService.electrico">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                </EntitySet>
+                <EntitySet Name="suspension" EntityType="CatalogService.suspension">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                </EntitySet>
+                <EntitySet Name="transmision" EntityType="CatalogService.transmision">
+                    <NavigationPropertyBinding Path="placa" Target="placas"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="placas">
+                <Key>
+                    <PropertyRef Name="placa"/>
+                </Key>
+                <Property Name="placa" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="numero_interno" Type="Edm.Int32"/>
+                <Property Name="fecha_inicio" Type="Edm.Date"/>
+                <Property Name="fecha_final" Type="Edm.Date"/>
+                <Property Name="kilometraje_inicial" Type="Edm.Int32"/>
+                <Property Name="kilometraje_final" Type="Edm.Int32"/>
+                <Property Name="color" Type="Edm.String" MaxLength="50"/>
+                <Property Name="tipo_motor" Type="Edm.String" MaxLength="50"/>
+                <Property Name="tipo_servicio" Type="Edm.String" MaxLength="50"/>
+                <Property Name="marca" Type="Edm.String" MaxLength="50"/>
+                <Property Name="modelo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="linea" Type="Edm.String" MaxLength="50"/>
+                <Property Name="observaciones" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="conductor" Type="CatalogService.conductor" Partner="placa">
+                    <ReferentialConstraint Property="placa" ReferencedProperty="placa_placa"/>
+                </NavigationProperty>
+                <NavigationProperty Name="reporte" Type="Collection(CatalogService.reporte)" Partner="placa"/>
+                <NavigationProperty Name="motor" Type="Collection(CatalogService.motor)" Partner="placa"/>
+                <NavigationProperty Name="electrico" Type="Collection(CatalogService.electrico)" Partner="placa"/>
+                <NavigationProperty Name="suspencion" Type="Collection(CatalogService.suspension)" Partner="placa"/>
+                <NavigationProperty Name="transmision" Type="Collection(CatalogService.transmision)" Partner="placa"/>
+            </EntityType>
+            <EntityType Name="conductor">
+                <Key>
+                    <PropertyRef Name="documento"/>
+                </Key>
+                <Property Name="documento" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="50"/>
+                <Property Name="apellido" Type="Edm.String" MaxLength="50"/>
+                <Property Name="telefono" Type="Edm.Int32"/>
+                <Property Name="email" Type="Edm.String" MaxLength="45"/>
+                <Property Name="direccion" Type="Edm.String" MaxLength="45"/>
+                <Property Name="observacion" Type="Edm.String" MaxLength="45"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="conductor">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="reporte_maquinaria" Type="Collection(CatalogService.reporte_maquinaria)" Partner="conductor"/>
+                <NavigationProperty Name="maquinaria" Type="Collection(CatalogService.maquinaria)" Partner="conductor"/>
+            </EntityType>
+            <EntityType Name="personal">
+                <Key>
+                    <PropertyRef Name="documento"/>
+                </Key>
+                <Property Name="documento" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="50"/>
+                <Property Name="apellido" Type="Edm.String" MaxLength="50"/>
+                <Property Name="telefono" Type="Edm.Int32"/>
+                <Property Name="email" Type="Edm.String" MaxLength="45"/>
+                <Property Name="direccion" Type="Edm.String" MaxLength="45"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="sede" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="proyectos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="50"/>
+                <Property Name="detalles" Type="Edm.String" MaxLength="50"/>
+                <Property Name="contacto" Type="Edm.Int32"/>
+                <Property Name="fecha_inicio" Type="Edm.Date"/>
+                <Property Name="fecha_fin" Type="Edm.Date"/>
+                <Property Name="ubicacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="observaciones" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="incidentes">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="contacto" Type="Edm.Int32"/>
+                <Property Name="fecha_inicio" Type="Edm.Date"/>
+                <Property Name="fecha_fin" Type="Edm.Date"/>
+                <Property Name="ubicacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="observaciones" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="responsables">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="operador" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ingeniero_residente" Type="Edm.String" MaxLength="50"/>
+                <Property Name="estadistica_obra" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ubicacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="observaciones" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="reporte">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha_inicio" Type="Edm.Date"/>
+                <Property Name="kilometraje_actual" Type="Edm.Int32"/>
+                <Property Name="nombre_funcionario" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ubicacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ciudad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="aceite" Type="Edm.String" MaxLength="50"/>
+                <Property Name="refrigerante" Type="Edm.String" MaxLength="50"/>
+                <Property Name="combustible" Type="Edm.String" MaxLength="50"/>
+                <Property Name="luz_delantera" Type="Edm.String" MaxLength="50"/>
+                <Property Name="luz_trasera" Type="Edm.String" MaxLength="50"/>
+                <Property Name="llantas" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cinturon_seguridad" Type="Edm.String" MaxLength="50"/>
+                <Property Name="equipo_carretera" Type="Edm.String" MaxLength="50"/>
+                <Property Name="freno_parqueo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="frenos" Type="Edm.String" MaxLength="50"/>
+                <Property Name="vidrios" Type="Edm.String" MaxLength="50"/>
+                <Property Name="carretera_kit" Type="Edm.String" MaxLength="50"/>
+                <Property Name="adjunto" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="reporte">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="combustible">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="horometro" Type="Edm.Int32"/>
+                <Property Name="kilometraje" Type="Edm.Int32"/>
+                <Property Name="cantidad" Type="Edm.Int32"/>
+                <Property Name="numero_vale" Type="Edm.Int32"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="observaciones" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="fallas">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="cabina" Type="Edm.String" MaxLength="50"/>
+                <Property Name="motor" Type="Edm.String" MaxLength="50"/>
+                <Property Name="pluma" Type="Edm.String" MaxLength="50"/>
+                <Property Name="brazo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cucharon" Type="Edm.String" MaxLength="50"/>
+                <Property Name="estabilizador" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cilindro" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="maquinaria" Type="CatalogService.maquinaria" Partner="falla_maquinaria">
+                    <ReferentialConstraint Property="maquinaria_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="maquinaria_ID" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="actividades">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="hora_inicio" Type="Edm.DateTimeOffset"/>
+                <Property Name="hora_fin" Type="Edm.DateTimeOffset"/>
+                <Property Name="sitio_cargue" Type="Edm.String" MaxLength="50"/>
+                <Property Name="sitio_descargue" Type="Edm.String" MaxLength="50"/>
+                <Property Name="vale_interno" Type="Edm.Int32"/>
+                <Property Name="vale_proovedor" Type="Edm.Int32"/>
+                <Property Name="peaje" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="equipos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="marca" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="contador" Type="Edm.Int32"/>
+                <Property Name="tipo_elementos" Type="Edm.String" MaxLength="50"/>
+                <Property Name="elementos_desgaste" Type="Edm.String" MaxLength="50"/>
+                <Property Name="proyecto" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="maquinaria">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="stock" Type="Edm.Int32"/>
+                <Property Name="lubricante_tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="medida" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cantidad" Type="Edm.Int32"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="conductor" Type="CatalogService.conductor" Partner="maquinaria">
+                    <ReferentialConstraint Property="conductor_documento" ReferencedProperty="documento"/>
+                </NavigationProperty>
+                <Property Name="conductor_documento" Type="Edm.Int32"/>
+                <NavigationProperty Name="reporte_maquinaria" Type="Collection(CatalogService.reporte_maquinaria)" Partner="maquinaria"/>
+                <NavigationProperty Name="falla_maquinaria" Type="Collection(CatalogService.fallas)" Partner="maquinaria"/>
+            </EntityType>
+            <EntityType Name="servicios">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="codigo" Type="Edm.Int32"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="hora" Type="Edm.DateTimeOffset"/>
+                <Property Name="stock" Type="Edm.Int32"/>
+                <Property Name="precio" Type="Edm.Double"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="repuestos">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="categoria" Type="Edm.String" MaxLength="50"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="stock" Type="Edm.Int32"/>
+                <Property Name="precio" Type="Edm.Double"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="registro_tiempo">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="hora" Type="Edm.DateTimeOffset"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="registro_personal">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="hora" Type="Edm.DateTimeOffset"/>
+                <Property Name="observaciones" Type="Edm.String"/>
+                <Property Name="adjunto" Type="Edm.String"/>
+                <Property Name="firma" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="registro_maquinaria">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="hora" Type="Edm.DateTimeOffset"/>
+                <Property Name="kilometraje" Type="Edm.Int32"/>
+                <Property Name="observaciones" Type="Edm.String"/>
+                <Property Name="adjunto" Type="Edm.String"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="reporte_maquinaria">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fecha" Type="Edm.Date"/>
+                <Property Name="cabina" Type="Edm.String" MaxLength="50"/>
+                <Property Name="motor" Type="Edm.String" MaxLength="50"/>
+                <Property Name="pluma" Type="Edm.String" MaxLength="50"/>
+                <Property Name="brazo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cucharon" Type="Edm.String" MaxLength="50"/>
+                <Property Name="estabilizador" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cilindro" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="maquinaria" Type="CatalogService.maquinaria" Partner="reporte_maquinaria">
+                    <ReferentialConstraint Property="maquinaria_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="maquinaria_ID" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="conductor" Type="CatalogService.conductor" Partner="reporte_maquinaria">
+                    <ReferentialConstraint Property="conductor_documento" ReferencedProperty="documento"/>
+                </NavigationProperty>
+                <Property Name="conductor_documento" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="motor">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="fuga_aceite" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ruido_motor" Type="Edm.String" MaxLength="50"/>
+                <Property Name="desajuste" Type="Edm.String" MaxLength="50"/>
+                <Property Name="exeso_humo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="dano" Type="Edm.String" MaxLength="50"/>
+                <Property Name="causa" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="motor">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="electrico">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="corto" Type="Edm.String" MaxLength="50"/>
+                <Property Name="pastas_rotas" Type="Edm.String" MaxLength="50"/>
+                <Property Name="plumillas" Type="Edm.String" MaxLength="50"/>
+                <Property Name="Bateria" Type="Edm.String" MaxLength="50"/>
+                <Property Name="pito" Type="Edm.String" MaxLength="50"/>
+                <Property Name="luces" Type="Edm.String" MaxLength="50"/>
+                <Property Name="dano" Type="Edm.String" MaxLength="50"/>
+                <Property Name="causa" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="electrico">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="suspension">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="amortiguadores" Type="Edm.String" MaxLength="50"/>
+                <Property Name="hoja_muelle" Type="Edm.String" MaxLength="50"/>
+                <Property Name="bujes_barra" Type="Edm.String" MaxLength="50"/>
+                <Property Name="tijeras" Type="Edm.String" MaxLength="50"/>
+                <Property Name="terminales" Type="Edm.String" MaxLength="50"/>
+                <Property Name="dano" Type="Edm.String" MaxLength="50"/>
+                <Property Name="causa" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="suspencion">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="transmision">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="cardan" Type="Edm.String" MaxLength="50"/>
+                <Property Name="caja_cambios" Type="Edm.String" MaxLength="50"/>
+                <Property Name="palanca_cambios" Type="Edm.String" MaxLength="50"/>
+                <Property Name="diferencial" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ejes" Type="Edm.String" MaxLength="50"/>
+                <Property Name="dano" Type="Edm.String" MaxLength="50"/>
+                <Property Name="causa" Type="Edm.String" MaxLength="50"/>
+                <Property Name="status" Type="Edm.Boolean"/>
+                <NavigationProperty Name="placa" Type="CatalogService.placas" Partner="transmision">
+                    <ReferentialConstraint Property="placa_placa" ReferencedProperty="placa"/>
+                </NavigationProperty>
+                <Property Name="placa_placa" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

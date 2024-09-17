@@ -1,0 +1,80 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": true,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"EntitySet": "{@odata.readLink}/reporte"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						},
+						"Title": "Reporte N°: {ID}",
+						"Subhead": "Fecha: {fecha_inicio}",
+						"Footnote": "Ubicación: {ubicacion}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Placa: {placa_placa}",
+						"SubstatusText": "Estado: {status}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/GTAProyect/Images/reporteG.png"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": false
+						},
+						"OnPress": "/GTAProyect/Actions/MobilGTA/reporte/NavToreporte_Detail.action",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "placas"
+	},
+	"_Type": "Page",
+	"_Name": "placas_reporte_List",
+	"Caption": "Lista de reportes",
+	"PrefersLargeCaption": true
+}

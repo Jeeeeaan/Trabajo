@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NayTosusoension_Detail"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_suspension/suspension_Detail.page"
+}

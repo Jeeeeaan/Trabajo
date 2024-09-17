@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NAvToplacas_fallas_list"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_placas/placas_fallas_List.page"
+}

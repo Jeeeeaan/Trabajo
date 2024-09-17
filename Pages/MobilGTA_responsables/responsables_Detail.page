@@ -1,0 +1,92 @@
+{
+	"Caption": "$(L,responsables_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "responsables",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/responsables/NavToresponsables_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/responsables/responsables_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{operador}",
+						"BodyText": "",
+						"Footnote": "{estadistica_obra}",
+						"Description": "{ingeniero_residente}",
+						"StatusText": "{ciudad}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{ubicacion}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "operador",
+							"Value": "{operador}"
+						},
+						{
+							"KeyName": "ingeniero_residente",
+							"Value": "{ingeniero_residente}"
+						},
+						{
+							"KeyName": "estadistica_obra",
+							"Value": "{estadistica_obra}"
+						},
+						{
+							"KeyName": "ciudad",
+							"Value": "{ciudad}"
+						},
+						{
+							"KeyName": "ubicacion",
+							"Value": "{ubicacion}"
+						},
+						{
+							"KeyName": "observaciones",
+							"Value": "{observaciones}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "responsables_Detail",
+	"PrefersLargeCaption": true
+}

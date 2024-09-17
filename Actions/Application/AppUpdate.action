@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/GTAProyect/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/GTAProyect/Rules/Application/AppUpdateSuccess.js"
+}

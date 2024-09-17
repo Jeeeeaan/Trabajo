@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NAvToReporte_maquinaria_fallas"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_reporte_maquinaria/reporte_maquinaria_Fallas.page"
+}

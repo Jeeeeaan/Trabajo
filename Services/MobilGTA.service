@@ -1,0 +1,6 @@
+{
+	"DestinationName": "MobilGTA",
+	"OfflineEnabled": true,
+	"SourceType": "Mobile",
+	"RestService": false
+}

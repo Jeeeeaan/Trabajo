@@ -1,0 +1,204 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Controls": [
+						{
+							"Value": "{ID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Falla N°",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{placa}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "placa_placa",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Placa",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/GTAProyect/Services/MobilGTA.service",
+									"EntitySet": "placas"
+								},
+								"DisplayValue": "{placa}",
+								"ReturnValue": "{placa}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": " amortiguadores",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": " Amortiguadores",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Rota",
+								"Desgaste",
+								"Juego",
+								"Ruido"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "hoja_muelle",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Hoja Muelle",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Rota",
+								"Desgaste",
+								"Juego",
+								"Ruido"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "bujes_barra",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Bujes Barra",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Rota",
+								"Desgaste",
+								"Juego",
+								"Ruido"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "tijeras",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Tijeras",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Rota",
+								"Desgaste",
+								"Juego",
+								"Ruido"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "terminales",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Terminales",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Rota",
+								"Desgaste",
+								"Juego",
+								"Ruido"
+							]
+						},
+						{
+							"Value": "{dano}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "dano",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Daño",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{causa}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "causa",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Causa",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "suspension_Edit",
+	"Caption": "Editar Falla Suspensión",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/suspencion/suspension_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

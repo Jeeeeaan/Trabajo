@@ -1,0 +1,96 @@
+{
+	"Caption": "$(L,equipos_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "equipos",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/equipos/NavToequipos_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/equipos/equipos_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{tipo}",
+						"BodyText": "",
+						"Footnote": "{fecha}",
+						"Description": "{marca}",
+						"StatusText": "{contador}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{tipo_elementos}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "tipo",
+							"Value": "{tipo}"
+						},
+						{
+							"KeyName": "marca",
+							"Value": "{marca}"
+						},
+						{
+							"KeyName": "fecha",
+							"Value": "{fecha}"
+						},
+						{
+							"KeyName": "contador",
+							"Value": "{contador}"
+						},
+						{
+							"KeyName": "tipo_elementos",
+							"Value": "{tipo_elementos}"
+						},
+						{
+							"KeyName": "elementos_desgaste",
+							"Value": "{elementos_desgaste}"
+						},
+						{
+							"KeyName": "proyecto",
+							"Value": "{proyecto}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "equipos_Detail",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,60 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10.hana.ondemand.com",
+		"Organization": "f2642ee4-da48-472c-a712-30e20757e552",
+		"Space": "5c761b2a-a3e8-4ead-977e-816b7c7a27f6",
+		"Deploy": {
+			"Description": "",
+			"WebClient": {
+				"Runtime": "production",
+				"URL": "https://mdk-webclient-runtime.cfapps.us10.hana.ondemand.com/runtime/"
+			},
+			"Destination": [
+				{
+					"CF": "MobilGTA",
+					"MDK": "MobilGTA",
+					"URL": ""
+				}
+			],
+			"Name": "ns.GTAProyect",
+			"Version": "1.0.0",
+			"AppRouter": "standalone",
+			"Auth": true,
+			"URL": "https://ambiente-desarrollo-ordenestaller-nsgtaproyect-approuter.cfapps.us10.hana.ondemand.com/nsGTAProyect"
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/f2642ee4-da48-472c-a712-30e20757e552/space/5c761b2a-a3e8-4ead-977e-816b7c7a27f6",
+		"AppId": "aplicacionMobilGTA",
+		"Destination": [
+			"com.sap.edm.sampleservice.v4",
+			"MobilGTA",
+			"aplicacionMobilGTA"
+		]
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=aplicacionMobilGTA&ClientId=4b55643c-0928-4cc5-885e-d772027dd50e&ServerUrl=https://enviromentdev-ordenestaller-aplicacionmobilgta.cfapps.us10.hana.ondemand.com&SapCloudPlatformEndpoint=https://enviromentdev-ordenestaller-aplicacionmobilgta.cfapps.us10.hana.ondemand.com&AuthorizationEndpointUrl=https://enviromentdev-ordenestaller-aplicacionmobilgta.cfapps.us10.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://enviromentdev-ordenestaller-aplicacionmobilgta.cfapps.us10.hana.ondemand.com&TokenUrl=https://enviromentdev-ordenestaller-aplicacionmobilgta.cfapps.us10.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true
+	}
+}

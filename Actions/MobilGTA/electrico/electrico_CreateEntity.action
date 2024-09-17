@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "electrico"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"corto": "#Control:corto/#SelectedValue",
+		"pastas_rotas": "#Control:pastas_rotas/#SelectedValue",
+		"plumillas": "#Control:plumillas/#SelectedValue",
+		"Bateria": "#Control:bateria/#SelectedValue",
+		"pito": "#Control:pito/#SelectedValue",
+		"luces": "#Control:luces/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value",
+		"placa_placa": "#Control:corto/#SelectedValue"
+	}
+}

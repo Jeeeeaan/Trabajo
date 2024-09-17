@@ -1,0 +1,9 @@
+{
+    "Service": "/GTAProyect/Services/MobilGTA.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/GTAProyect/Actions/MobilGTA/Service/DownloadStartedMessage.action",
+    "OnFailure": "/GTAProyect/Actions/MobilGTA/Service/SyncFailureMessage.action"
+}

@@ -1,0 +1,217 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "{ID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Falla N°",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": [
+								"{placa}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "placa_placa",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Placa",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/GTAProyect/Services/MobilGTA.service",
+									"EntitySet": "transmision"
+								},
+								"DisplayValue": "{placa_placa}",
+								"ReturnValue": "{placa_placa}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "cardan",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Cardan",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "caja_cambios",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Caja de cambios",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "control_cambios",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Control Cambios",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "palanca_cambios",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Palanca de cambios",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Diferencial",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "ejes",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Ejes",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"Ruido",
+								"Fuga",
+								"Roto",
+								"Juego"
+							]
+						},
+						{
+							"Value": "{dano}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "dano",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Daño",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{causa}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "causa",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Causa",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "transmision_Edit",
+	"Caption": "Editar Falla Transmisión",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/transmision/transmision_updateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"_Type": "Action.Type.ODataService.CreateRelatedEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "suspension"
+	},
+	"ParentLink": {
+		"Target": {
+			"EntitySet": "placas",
+			"ReadLink": "{@odata.readLink}"
+		},
+		"Property": "suspencion"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"amortiguadores": "#Control: amortiguadores/#SelectedValue",
+		"hoja_muelle": "#Control:hoja_muelle/#SelectedValue",
+		"bujes_barra": "#Control:bujes_barra/#SelectedValue",
+		"tijeras": "#Control:tijeras/#SelectedValue",
+		"terminales": "#Control:terminales/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value",
+		"placa_placa": "#Control:placa_placa/#SelectedValue"
+	}
+}

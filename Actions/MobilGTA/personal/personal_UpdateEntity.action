@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "personal",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "documento": "#Control:documento/#Value",
+        "nombre": "#Control:nombre/#Value",
+        "apellido": "#Control:apellido/#Value",
+        "telefono": "#Control:telefono/#Value",
+        "email": "#Control:email/#Value",
+        "direccion": "#Control:direccion/#Value",
+        "ciudad": "#Control:ciudad/#Value",
+        "sede": "#Control:sede/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}

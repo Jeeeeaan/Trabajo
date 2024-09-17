@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_actividades/actividades_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

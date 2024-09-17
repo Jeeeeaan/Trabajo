@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_registro_personal/registro_personal_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

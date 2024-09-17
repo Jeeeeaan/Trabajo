@@ -1,0 +1,23 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "horometro": "#Control:horometro/#Value",
+        "kilometraje": "#Control:kilometraje/#Value",
+        "cantidad": "#Control:cantidad/#Value",
+        "numero_vale": "#Control:numero_vale/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "observaciones": "#Control:observaciones/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "Target": {
+        "EntitySet": "combustible",
+        "Service": "/GTAProyect/Services/MobilGTA.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

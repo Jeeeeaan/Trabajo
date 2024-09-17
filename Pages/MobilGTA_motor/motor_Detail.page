@@ -1,0 +1,133 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "motor",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"fallas"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Daño: {dano}",
+						"Footnote": "Ruido en motor: {ruido_motor}",
+						"Description": "Fuga de Aceite: {fuga_aceite}",
+						"StatusText": "Desajuste: {desajuste}",
+						"SubstatusText": "Exceso humo : {exeso_humo}",
+						"DetailImage": "/GTAProyect/Images/motorG.png",
+						"HeadlineText": "Falla N°: {ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Falla N°",
+							"Visible": true
+						},
+						{
+							"Value": "{dano}",
+							"_Name": "KeyValue1",
+							"KeyName": "Daño",
+							"Visible": true
+						},
+						{
+							"Value": "{placa_placa}",
+							"_Name": "placa_placa",
+							"KeyName": "Placa",
+							"Visible": true
+						},
+						{
+							"Value": "{fuga_aceite}",
+							"_Name": "KeyValue2",
+							"KeyName": "Fuga de aceite",
+							"Visible": true
+						},
+						{
+							"Value": "{ruido_motor}",
+							"_Name": "KeyValue3",
+							"KeyName": "Ruido Motor",
+							"Visible": true
+						},
+						{
+							"Value": "{desajuste}",
+							"_Name": "KeyValue4",
+							"KeyName": "Desajuste",
+							"Visible": true
+						},
+						{
+							"Value": "{exeso_humo}",
+							"_Name": "KeyValue5",
+							"KeyName": "Exceso humo ",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue6",
+							"KeyName": "status",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "motor_Detail",
+	"Caption": "Detalles Falla Motor",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/motor/NavTomotor_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Rules/MobilGTA/motor/motor_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

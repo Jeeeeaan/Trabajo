@@ -1,0 +1,23 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "update"
+	},
+	"OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "maquinaria",
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"tipo": "#Control:tipo/#Value",
+		"fecha": "#Control:fecha/#Value",
+		"stock": "#Control:stock/#Value",
+		"lubricante_tipo": "#Control:lubricante_tipo/#Value",
+		"medida": "#Control:medida/#Value",
+		"cantidad": "#Control:cantidad/#Value",
+		"status": "#Control:status/#Value"
+	}
+}

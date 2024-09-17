@@ -1,0 +1,96 @@
+{
+	"Caption": "$(L,personal_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "personal",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/personal/NavTopersonal_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/personal/personal_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{documento}",
+						"Subhead": "{nombre}",
+						"BodyText": "",
+						"Footnote": "{telefono}",
+						"Description": "{apellido}",
+						"StatusText": "{email}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{direccion}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "documento",
+							"Value": "{documento}"
+						},
+						{
+							"KeyName": "nombre",
+							"Value": "{nombre}"
+						},
+						{
+							"KeyName": "apellido",
+							"Value": "{apellido}"
+						},
+						{
+							"KeyName": "telefono",
+							"Value": "{telefono}"
+						},
+						{
+							"KeyName": "email",
+							"Value": "{email}"
+						},
+						{
+							"KeyName": "direccion",
+							"Value": "{direccion}"
+						},
+						{
+							"KeyName": "ciudad",
+							"Value": "{ciudad}"
+						},
+						{
+							"KeyName": "sede",
+							"Value": "{sede}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "personal_Detail",
+	"PrefersLargeCaption": true
+}

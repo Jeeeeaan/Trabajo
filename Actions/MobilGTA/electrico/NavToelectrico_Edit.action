@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_electrico/electrico_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

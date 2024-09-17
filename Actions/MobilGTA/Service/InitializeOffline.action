@@ -1,0 +1,92 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/GTAProyect/Actions/MobilGTA/Service/InitializeOfflineFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/GTAProyect/Services/MobilGTA.service",
+	"DefiningRequests": [
+		{
+			"Name": "actividades",
+			"Query": "actividades"
+		},
+		{
+			"Name": "combustible",
+			"Query": "combustible"
+		},
+		{
+			"Name": "conductor",
+			"Query": "conductor"
+		},
+		{
+			"Name": "electrico",
+			"Query": "electrico"
+		},
+		{
+			"Name": "equipos",
+			"Query": "equipos"
+		},
+		{
+			"Name": "fallas",
+			"Query": "fallas"
+		},
+		{
+			"Name": "incidentes",
+			"Query": "incidentes"
+		},
+		{
+			"Name": "maquinaria",
+			"Query": "maquinaria"
+		},
+		{
+			"Name": "motor",
+			"Query": "motor"
+		},
+		{
+			"Name": "personal",
+			"Query": "personal"
+		},
+		{
+			"Name": "placas",
+			"Query": "placas"
+		},
+		{
+			"Name": "proyectos",
+			"Query": "proyectos"
+		},
+		{
+			"Name": "registro_maquinaria",
+			"Query": "registro_maquinaria"
+		},
+		{
+			"Name": "registro_personal",
+			"Query": "registro_personal"
+		},
+		{
+			"Name": "registro_tiempo",
+			"Query": "registro_tiempo"
+		},
+		{
+			"Name": "reporte",
+			"Query": "reporte"
+		},
+		{
+			"Name": "reporte_maquinaria",
+			"Query": "reporte_maquinaria"
+		},
+		{
+			"Name": "repuestos",
+			"Query": "repuestos"
+		},
+		{
+			"Name": "responsables",
+			"Query": "responsables"
+		},
+		{
+			"Name": "servicios",
+			"Query": "servicios"
+		}
+	]
+}

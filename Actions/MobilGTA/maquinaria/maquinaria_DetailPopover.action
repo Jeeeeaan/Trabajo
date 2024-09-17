@@ -1,0 +1,20 @@
+{
+	"_Type": "Action.Type.PopoverMenu",
+	"ActionResult": {
+		"_Name": "maquinaria_DetailPopover"
+	},
+	"PopoverItems": [
+		{
+			"Title": "Crear Reporte",
+			"OnPress": "/GTAProyect/Actions/MobilGTA/reporte_maquinaria/NavToreporte_maquinaria_Create.action"
+		},
+		{
+			"Title": "Reportar Falla",
+			"OnPress": "/GTAProyect/Actions/MobilGTA/reporte_maquinaria/NAvToReporte_maquinaria_fallas.action"
+		},
+		{
+			"Title": "Borrar",
+			"OnPress": "/GTAProyect/Rules/MobilGTA/maquinaria/maquinaria_DeleteConfirmation.js"
+		}
+	]
+}

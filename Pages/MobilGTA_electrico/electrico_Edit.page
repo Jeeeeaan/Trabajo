@@ -1,0 +1,217 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "electrico",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{ID}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ID",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Falla N°",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": [
+								"{placa_placa}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "placa_placa",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Placa",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/GTAProyect/Services/MobilGTA.service",
+									"EntitySet": "placas"
+								},
+								"DisplayValue": "{placa}",
+								"ReturnValue": "{placa}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "corto",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Corto",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "pastas_rotas",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pastas Rotas",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "plumillas",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Plumillas",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "bateria",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Bateria",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "pito",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Pito",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SegmentedControl",
+							"_Name": "luces",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Luces",
+							"IsEditable": true,
+							"ApportionsSegmentWidthsByContent": false,
+							"Segments": [
+								"No Funciona",
+								"Desgaste",
+								"Faltante"
+							]
+						},
+						{
+							"Value": "{dano}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "dano",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Daño",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{causa}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "causa",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Causa",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "electrico_Edit",
+	"Caption": "Editar Falla Eléctrica",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/electrico_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "reporte_maquinaria",
+		"Service": "/GTAProyect/Services/MobilGTA.service"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"fecha": "#Control:fecha/#Value",
+		"cabina": "#Control:cabina/#SelectedValue",
+		"motor": "#Control:motor/#SelectedValue",
+		"pluma": "#Control:pluma/#SelectedValue",
+		"brazo": "#Control:brazo/#SelectedValue",
+		"cucharon": "#Control:cucharon/#SelectedValue",
+		"estabilizador": "#Control:estabilizador/#SelectedValue",
+		"cilindro": "#Control:cilindro/#SelectedValue",
+		"status": "#Control:status/#Value",
+		"maquinaria_ID": "#Control:maquinaria_ID/#Value"
+		
+	}
+}

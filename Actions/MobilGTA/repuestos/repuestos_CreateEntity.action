@@ -1,0 +1,22 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "categoria": "#Control:categoria/#Value",
+        "nombre": "#Control:nombre/#Value",
+        "fecha": "#Control:fecha/#Value",
+        "stock": "#Control:stock/#Value",
+        "precio": "#Control:precio/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "Target": {
+        "EntitySet": "repuestos",
+        "Service": "/GTAProyect/Services/MobilGTA.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}

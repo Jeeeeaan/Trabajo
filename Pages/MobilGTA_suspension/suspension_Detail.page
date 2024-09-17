@@ -1,0 +1,119 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Daño: {dano}",
+						"Footnote": "Falla Suspensión",
+						"DetailImage": "/GTAProyect/Images/suspensionG.png",
+						"DetailImageIsCircular": false,
+						"BodyText": "Causa: {causa}",
+						"HeadlineText": "Código Falla: {ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": "{ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Código Falla",
+							"Visible": true
+						},
+						{
+							"Value": "{placa_placa}",
+							"_Name": "KeyValue1",
+							"KeyName": "Placa",
+							"Visible": true
+						},
+						{
+							"Value": "{amortiguadores}",
+							"_Name": "KeyValue4",
+							"KeyName": "Amortiguadores",
+							"Visible": true
+						},
+						{
+							"Value": "{bujes_barra}",
+							"_Name": "KeyValue2",
+							"KeyName": "Bujes barra",
+							"Visible": true
+						},
+						{
+							"Value": "{hoja_muelle}",
+							"_Name": "KeyValue6",
+							"KeyName": "Hoja Muelle",
+							"Visible": true
+						},
+						{
+							"Value": "{terminales}",
+							"_Name": "KeyValue3",
+							"KeyName": "Terminales",
+							"Visible": true
+						},
+						{
+							"Value": "{tijeras}",
+							"_Name": "KeyValue8",
+							"KeyName": "Tijeras",
+							"Visible": true
+						},
+						{
+							"Value": "{dano}",
+							"_Name": "KeyValue7",
+							"KeyName": "Daño",
+							"Visible": true
+						},
+						{
+							"Value": "{causa}",
+							"_Name": "KeyValue5",
+							"KeyName": "Causa",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue9",
+							"KeyName": "Estado",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "suspension"
+	},
+	"_Type": "Page",
+	"_Name": "suspension_Detail",
+	"Caption": "Detalles Falla Suspensión",
+	"PrefersLargeCaption": true
+}

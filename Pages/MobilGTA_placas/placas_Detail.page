@@ -1,0 +1,194 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "placas",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"reporte",
+				"fallas"
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "N° Interno: {numero_interno}",
+						"Footnote": "Marca: {marca}",
+						"Description": "Modelo: {modelo}",
+						"StatusText": "Km Inicial: {kilometraje_inicial}",
+						"SubstatusText": "Último Km: {kilometraje_final}",
+						"DetailImage": "/GTAProyect/Images/carroG.png",
+						"HeadlineText": "Placa: {placa}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{nombre}",
+							"_Name": "KeyValue0",
+							"KeyName": "Nombre",
+							"Visible": true
+						},
+						{
+							"Value": "{apellido}",
+							"_Name": "KeyValue16",
+							"KeyName": "Apellido",
+							"Visible": true
+						},
+						{
+							"Value": "{ciudad}",
+							"_Name": "KeyValue1",
+							"KeyName": "Ciudad",
+							"Visible": true
+						},
+						{
+							"Value": "{direccion}",
+							"_Name": "KeyValue11",
+							"KeyName": "Dirección",
+							"Visible": true
+						},
+						{
+							"Value": "{telefono}",
+							"_Name": "KeyValue12",
+							"KeyName": "Celular",
+							"Visible": true
+						},
+						{
+							"Value": "{email}",
+							"_Name": "KeyValue15",
+							"KeyName": "Email",
+							"Visible": true
+						},
+						{
+							"Value": "{observacion}",
+							"_Name": "KeyValue13",
+							"KeyName": "Observaciones",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"Target": {
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"EntitySet": "{@odata.readLink}/conductor"
+					},
+					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader2",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Conductor"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Reportes y Fallas"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton1",
+							"Title": "Ver lista de reportes",
+							"Alignment": "Center",
+							"ButtonType": "Secondary",
+							"Semantic": "Normal",
+							"Image": "/GTAProyect/Images/reporte(8).png",
+							"ImagePosition": "Leading",
+							"FullWidth": true,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NavToplacas_reporte_list.action"
+						},
+						{
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButtonFallas",
+							"Title": "Ver lista de fallas",
+							"Alignment": "Center",
+							"ButtonType": "Secondary",
+							"Semantic": "Normal",
+							"Image": "/GTAProyect/Images/falla(7).png",
+							"ImagePosition": "Leading",
+							"FullWidth": true,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NAvToplacas_fallas_list.action"
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "placas_Detail",
+	"Caption": "Detalles vehículo",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/placas/NavToplacas_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Reportar",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/placas/placas_DetailPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_registro_maquinaria/registro_maquinaria_Create.page",
+    "_Type": "Action.Type.Navigation"
+}

@@ -1,0 +1,13 @@
+{
+	"_Type": "Action.Type.PopoverMenu",
+	"PopoverItems": [
+		{
+			"Title": "Add fallas",
+			"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/NavToelectrico_Create.action"
+		},
+		{
+			"Title": "Delete",
+			"OnPress": "/GTAProyect/Rules/MobilGTA/electrico/electrico_DeleteConfirmation.js"
+		}
+	]
+}

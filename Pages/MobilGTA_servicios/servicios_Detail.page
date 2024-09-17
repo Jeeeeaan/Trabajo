@@ -1,0 +1,92 @@
+{
+	"Caption": "$(L,servicios_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "servicios",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/servicios/NavToservicios_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/servicios/servicios_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{tipo}",
+						"BodyText": "",
+						"Footnote": "{fecha}",
+						"Description": "{codigo}",
+						"StatusText": "{hora}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{stock}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "tipo",
+							"Value": "{tipo}"
+						},
+						{
+							"KeyName": "codigo",
+							"Value": "{codigo}"
+						},
+						{
+							"KeyName": "fecha",
+							"Value": "{fecha}"
+						},
+						{
+							"KeyName": "hora",
+							"Value": "{hora}"
+						},
+						{
+							"KeyName": "stock",
+							"Value": "{stock}"
+						},
+						{
+							"KeyName": "precio",
+							"Value": "{precio}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "servicios_Detail",
+	"PrefersLargeCaption": true
+}

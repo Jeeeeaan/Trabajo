@@ -1,0 +1,209 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "reporte",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Fecha: {fecha_inicio}",
+						"Footnote": "Funcionario: {nombre_funcionario}",
+						"Description": "Kilometraje actual: {kilometraje_actual}",
+						"StatusText": "Ubicacion: {ubicacion}",
+						"SubstatusText": "Ciudad: {ciudad}",
+						"DetailImage": "/GTAProyect/Images/reporteG.png",
+						"HeadlineText": "Reporte N°: {ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Reporte N°",
+							"Visible": true
+						},
+						{
+							"Value": "{fecha_inicio}",
+							"_Name": "KeyValue1",
+							"KeyName": "Fecha",
+							"Visible": true
+						},
+						{
+							"Value": "{placa_placa}",
+							"_Name": "KeyValue20",
+							"KeyName": "Placa",
+							"Visible": true
+						},
+						{
+							"Value": "{kilometraje_actual}",
+							"_Name": "KeyValue2",
+							"KeyName": "Kilometraje",
+							"Visible": true
+						},
+						{
+							"Value": "{nombre_funcionario}",
+							"_Name": "KeyValue3",
+							"KeyName": "Funcionario",
+							"Visible": true
+						},
+						{
+							"Value": "{ubicacion}",
+							"_Name": "KeyValue4",
+							"KeyName": "Ubicación",
+							"Visible": true
+						},
+						{
+							"Value": "{ciudad}",
+							"_Name": "KeyValue5",
+							"KeyName": "Ciudad",
+							"Visible": true
+						},
+						{
+							"Value": "{aceite}",
+							"_Name": "KeyValue6",
+							"KeyName": "Aceite",
+							"Visible": true
+						},
+						{
+							"Value": "{refrigerante}",
+							"_Name": "KeyValue7",
+							"KeyName": "Refrigerante",
+							"Visible": true
+						},
+						{
+							"Value": "{combustible}",
+							"_Name": "KeyValue8",
+							"KeyName": "Combustible",
+							"Visible": true
+						},
+						{
+							"Value": "{luz_delantera}",
+							"_Name": "KeyValue9",
+							"KeyName": "Luz delantera",
+							"Visible": true
+						},
+						{
+							"Value": "{luz_trasera}",
+							"_Name": "KeyValue10",
+							"KeyName": "Luz trasera",
+							"Visible": true
+						},
+						{
+							"Value": "{llantas}",
+							"_Name": "KeyValue11",
+							"KeyName": "Llantas",
+							"Visible": true
+						},
+						{
+							"Value": "{cinturon_seguridad}",
+							"_Name": "KeyValue12",
+							"KeyName": "Cinturón de seguridad",
+							"Visible": true
+						},
+						{
+							"Value": "{equipo_carretera}",
+							"_Name": "KeyValue13",
+							"KeyName": "Equipo de carretera ",
+							"Visible": true
+						},
+						{
+							"Value": "{freno_parqueo}",
+							"_Name": "KeyValue14",
+							"KeyName": "Freno de parqueo",
+							"Visible": true
+						},
+						{
+							"Value": "{frenos}",
+							"_Name": "KeyValue15",
+							"KeyName": "Frenos",
+							"Visible": true
+						},
+						{
+							"Value": "{vidrios}",
+							"_Name": "KeyValue16",
+							"KeyName": "Vidrios",
+							"Visible": true
+						},
+						{
+							"Value": "{carretera_kit}",
+							"_Name": "KeyValue17",
+							"KeyName": "Kit de carretera",
+							"Visible": true
+						},
+						{
+							"Value": "{adjunto}",
+							"_Name": "KeyValue18",
+							"KeyName": "Adjunto",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue19",
+							"KeyName": "Estado",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "reporte_Detail",
+	"Caption": "Detalles Reporte",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/reporte/NavToreporte_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Rules/MobilGTA/reporte/reporte_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

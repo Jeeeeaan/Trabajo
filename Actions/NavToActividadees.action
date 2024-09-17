@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToActividadees"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_actividades/actividades_List.page"
+}

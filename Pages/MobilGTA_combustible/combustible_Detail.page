@@ -1,0 +1,92 @@
+{
+	"Caption": "$(L,combustible_Detail)",
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "combustible",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/GTAProyect/Actions/MobilGTA/combustible/NavTocombustible_Edit.action",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/GTAProyect/Rules/MobilGTA/combustible/combustible_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{ID}",
+						"Subhead": "{horometro}",
+						"BodyText": "",
+						"Footnote": "{cantidad}",
+						"Description": "{kilometraje}",
+						"StatusText": "{numero_vale}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{tipo}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "ID",
+							"Value": "{ID}"
+						},
+						{
+							"KeyName": "horometro",
+							"Value": "{horometro}"
+						},
+						{
+							"KeyName": "kilometraje",
+							"Value": "{kilometraje}"
+						},
+						{
+							"KeyName": "cantidad",
+							"Value": "{cantidad}"
+						},
+						{
+							"KeyName": "numero_vale",
+							"Value": "{numero_vale}"
+						},
+						{
+							"KeyName": "tipo",
+							"Value": "{tipo}"
+						},
+						{
+							"KeyName": "observaciones",
+							"Value": "{observaciones}"
+						},
+						{
+							"KeyName": "status",
+							"Value": "{status}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "combustible_Detail",
+	"PrefersLargeCaption": true
+}

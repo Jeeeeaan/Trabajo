@@ -1,0 +1,30 @@
+{
+	"_Type": "Action.Type.ODataService.CreateRelatedEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "transmision"
+	},
+	"ParentLink": {
+		"Target": {
+			"EntitySet": "placas"
+		},
+		"Property": "transmision"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"cardan": "#Control:cardan/#SelectedValue",
+		"caja_cambios": "#Control:caja_cambios/#SelectedValue",
+		"palanca_cambios": "#Control:palanca_cambios/#SelectedValue",
+		"diferencial": "#Control:diferencial/#SelectedValue",
+		"ejes": "#Control:ejes/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value",
+		"placa_placa": "#Control:cardan/#SelectedValue"
+	}
+}

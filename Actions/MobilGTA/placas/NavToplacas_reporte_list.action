@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToplacas_reporte_list"
+	},
+	"PageToOpen": "/GTAProyect/Pages/MobilGTA_placas/placas_reporte_List.page"
+}

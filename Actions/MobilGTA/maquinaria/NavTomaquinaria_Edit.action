@@ -1,0 +1,6 @@
+{
+    "ModalPageFullscreen": false,
+    "ModalPage": true,
+    "PageToOpen": "/GTAProyect/Pages/MobilGTA_maquinaria/maquinaria_Edit.page",
+    "_Type": "Action.Type.Navigation"
+}

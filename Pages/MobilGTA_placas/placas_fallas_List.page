@@ -1,0 +1,160 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Fallas Motor"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"EntitySet": "{@odata.readLink}/motor"
+					},
+					"_Name": "SectionObjectTable1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						},
+						"Title": "Falla N°: {ID}",
+						"Subhead": "Daño: {dano}",
+						"Footnote": "Causa: {causa}",
+						"Description": "Falla  Motor",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Placa: {placa_placa}",
+						"SubstatusText": "Estado: {status}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/GTAProyect/Images/motorG.png"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": false
+						},
+						"OnPress": "/GTAProyect/Actions/MobilGTA/motor/NavTomotor_Detail.action",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Fallas Electrícas"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"EntitySet": "{@odata.readLink}/electrico"
+					},
+					"_Name": "SectionObjectTable4",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": []
+						},
+						"Title": "Falla N°: {ID}",
+						"Subhead": "Daño: {dano}",
+						"Footnote": "Causa: {causa}",
+						"Description": "Falla Electrica",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Placa: {placa_placa}",
+						"SubstatusText": "Estado: {status}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "/GTAProyect/Images/electricoG.png"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": false
+						},
+						"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/NavToelectrico_Detail.action",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "placas"
+	},
+	"_Type": "Page",
+	"_Name": "placas_fallas_List",
+	"Caption": "Listado de fallas",
+	"PrefersLargeCaption": true
+}

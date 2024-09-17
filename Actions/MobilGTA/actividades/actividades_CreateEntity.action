@@ -1,0 +1,24 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "create"
+	},
+	"OnFailure": "/GTAProyect/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/GTAProyect/Actions/CreateEntitySuccessMessage.action",
+	"Target": {
+		"EntitySet": "actividades",
+		"Service": "/GTAProyect/Services/MobilGTA.service"
+	},
+	"Properties": {
+		"ID": "#Control:ID/#Value",
+		"tipo": "#Control:tipo/#Value",
+		"hora_inicio": "#Control:hora_inicio/#Value",
+		"hora_fin": "#Control:hora_fin/#Value",
+		"sitio_cargue": "#Control:sitio_cargue/#Value",
+		"sitio_descargue": "#Control:sitio_descargue/#Value",
+		"vale_interno": "#Control:vale_interno/#Value",
+		"vale_proovedor": "#Control:vale_proovedor/#Value",
+		"peaje": "#Control:peaje/#Value",
+		"status": "#Control:status/#Value"
+	}
+}

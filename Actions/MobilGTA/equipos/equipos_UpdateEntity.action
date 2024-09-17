@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "equipos",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "marca": "#Control:marca/#Value",
+        "fecha": "#Control:fecha/#Value",
+        "contador": "#Control:contador/#Value",
+        "tipo_elementos": "#Control:tipo_elementos/#Value",
+        "elementos_desgaste": "#Control:elementos_desgaste/#Value",
+        "proyecto": "#Control:proyecto/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}

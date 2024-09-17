@@ -1,0 +1,215 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "placas",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Value": "{placa}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "placa",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Placa",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"PickerItems": {
+								"DisplayValue": "{placa_placa}",
+								"ReturnValue": "{placa_placa}",
+								"Target": {
+									"EntitySet": "conductor",
+									"Service": "/GTAProyect/Services/MobilGTA.service"
+								}
+							}
+						},
+						{
+							"Value": "{numero_interno}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "numero_interno",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Número Interno ",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{fecha_inicio}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "fecha_inicio",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Fecha Ingreso",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": "{fecha_final}",
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "fecha_final",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Fecha Salida",
+							"IsEditable": true,
+							"Mode": "Date"
+						},
+						{
+							"Value": "{kilometraje_inicial}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "kilometraje_inicial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "kilometraje Inicial",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{kilometraje_final}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "kilometraje_final",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "kilometraje Final",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{color}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "color",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Color",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{tipo_motor}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "tipo_motor",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Tipo Motor",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{tipo_servicio}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "tipo_servicio",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Tipo Servicio",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{marca}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "marca",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Marca",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{modelo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "modelo",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Modelo",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{linea}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "linea",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "linea",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{observaciones}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "Observaciones",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "observaciones",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{status}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "status",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"IsEditable": true
+						}
+					],
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "placas_Edit",
+	"Caption": "Editar Vehículo",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/placas/placas_UpdateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

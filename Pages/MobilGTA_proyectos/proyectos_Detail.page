@@ -1,0 +1,184 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "proyectos",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Nombre: {nombre}",
+						"Footnote": "Contacto: {contacto}",
+						"Description": "Detalles: {detalles}",
+						"StatusText": "Fecha: {fecha_inicio}",
+						"SubstatusText": "Fecha Final: {fecha_fin}",
+						"HeadlineText": "Proyecto N°: {ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{ID}",
+							"_Name": "KeyValue0",
+							"KeyName": "Proyecto N°",
+							"Visible": true
+						},
+						{
+							"Value": "{nombre}",
+							"_Name": "KeyValue1",
+							"KeyName": "Nombre",
+							"Visible": true
+						},
+						{
+							"Value": "{detalles}",
+							"_Name": "KeyValue2",
+							"KeyName": "Detalles",
+							"Visible": true
+						},
+						{
+							"Value": "{contacto}",
+							"_Name": "KeyValue3",
+							"KeyName": "Contacto",
+							"Visible": true
+						},
+						{
+							"Value": "{fecha_inicio}",
+							"_Name": "KeyValue4",
+							"KeyName": "Fecha de inicio",
+							"Visible": true
+						},
+						{
+							"Value": "{fecha_fin}",
+							"_Name": "KeyValue5",
+							"KeyName": "Fecha Final",
+							"Visible": true
+						},
+						{
+							"Value": "{ubicacion}",
+							"_Name": "KeyValue6",
+							"KeyName": "Ubicaciôn",
+							"Visible": true
+						},
+						{
+							"Value": "{ciudad}",
+							"_Name": "KeyValue7",
+							"KeyName": "Ciudad",
+							"Visible": true
+						},
+						{
+							"Value": "{observaciones}",
+							"_Name": "KeyValue8",
+							"KeyName": "Observaciones",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue9",
+							"KeyName": "Estado",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable2",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Actividades:"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton0",
+							"Title": "Ver lista de actividades",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "/GTAProyect/Images/reporte(8).png",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/GTAProyect/Actions/NavToActividadesList.action"
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "proyectos_Detail",
+	"Caption": "Detalles Proyecto",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/proyectos/NavToproyectos_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Rules/MobilGTA/proyectos/proyectos_DeleteConfirmation.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

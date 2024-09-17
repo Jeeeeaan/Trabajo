@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "tranmision_updateEntity"
+	},
+	"Target": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "transmision",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"cardan": "#Control:cardan/#SelectedValue",
+		"caja_cambios": "#Control:caja_cambios/#SelectedValue",
+		"palanca_cambios": "#Control:palanca_cambios/#SelectedValue",
+		"diferencial": "#Control:diferencial/#SelectedValue",
+		"ejes": "#Control:cardan/#SelectedValue",
+		"dano": "#Control:dano/#Value",
+		"causa": "#Control:causa/#Value",
+		"status": "#Control:status/#Value"
+	}
+}

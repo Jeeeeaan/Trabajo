@@ -1,0 +1,104 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ImageCollection",
+					"_Name": "SectionImageCollection0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Seleccione tipo de falla"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ImageCells": [
+						{
+							"ImageCell": {
+								"_Name": "SectionImageCell2",
+								"Title": "Motor",
+								"Image": "/GTAProyect/Images/motor(10).png",
+								"ImageIsCircular": false,
+								"Visible": true,
+								"OnPress": "/GTAProyect/Actions/MobilGTA/motor/NavTomotor_Create.action"
+							}
+						},
+						{
+							"ImageCell": {
+								"_Name": "SectionImageCell0",
+								"Title": "Eléctrico",
+								"Image": "/GTAProyect/Images/electrico(9).png",
+								"ImageIsCircular": false,
+								"Visible": true,
+								"OnPress": "/GTAProyect/Actions/MobilGTA/electrico/NavToelectrico_Create.action"
+							}
+						}
+					],
+					"Layout": {
+						"LayoutType": "HorizontalFit"
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ImageCollection",
+					"_Name": "SectionImageCollection2",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ImageCells": [
+						{
+							"ImageCell": {
+								"_Name": "suspension",
+								"Title": "Suspensión",
+								"Image": "/GTAProyect/Images/suspension(11).png",
+								"ImageIsCircular": false,
+								"Visible": true
+							}
+						},
+						{
+							"ImageCell": {
+								"_Name": "transmision",
+								"Title": "Transmisión",
+								"Image": "/GTAProyect/Images/transmision(12).png",
+								"ImageIsCircular": false,
+								"Visible": true,
+								"OnPress": "/GTAProyect/Actions/MobilGTA/transmision/NavTotransmision_Create.action"
+							}
+						}
+					],
+					"Layout": {
+						"LayoutType": "HorizontalFit"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "placas_Selectfallas",
+	"Caption": "Reporte Fallas",
+	"PrefersLargeCaption": true
+}

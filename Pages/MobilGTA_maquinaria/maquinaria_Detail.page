@@ -1,0 +1,134 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/GTAProyect/Services/MobilGTA.service",
+		"EntitySet": "maquinaria"
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Tipo: {tipo}",
+						"Footnote": "Unidades: {stock}",
+						"Description": "Fecha: {fecha}",
+						"StatusText": "Tipo Lubricante: {lubricante_tipo}",
+						"SubstatusText": "Cantidad: {medida}",
+						"DetailImage": "/GTAProyect/Images/GuraG.png",
+						"HeadlineText": "Codigo:{ID}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{nombre}",
+							"_Name": "KeyValue0",
+							"KeyName": "Nombre",
+							"Visible": true
+						},
+						{
+							"Value": "{apellido}",
+							"_Name": "KeyValue1",
+							"KeyName": "Apellido",
+							"Visible": true
+						},
+						{
+							"Value": "{ciudad}",
+							"_Name": "KeyValue2",
+							"KeyName": "Ciudad",
+							"Visible": true
+						},
+						{
+							"Value": "{email}",
+							"_Name": "KeyValue3",
+							"KeyName": "Email",
+							"Visible": true
+						},
+						{
+							"Value": "{telefono}",
+							"_Name": "KeyValue4",
+							"KeyName": "Teléfono",
+							"Visible": true
+						},
+						{
+							"Value": "{direccion}",
+							"_Name": "KeyValue5",
+							"KeyName": "Dirección",
+							"Visible": true
+						},
+						{
+							"Value": "{status}",
+							"_Name": "KeyValue6",
+							"KeyName": "Estado",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.KeyValue",
+					"Target": {
+						"Service": "/GTAProyect/Services/MobilGTA.service",
+						"EntitySet": "{@odata.readLink}/conductor"
+					},
+					"_Name": "SectionKeyValue0",
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Conductor"
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "maquinaria_Detail",
+	"Caption": "Detalles Maquinaria",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Reportar",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/maquinaria/NavTomaquinaria_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Reportar",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/GTAProyect/Actions/MobilGTA/maquinaria/maquinaria_DetailPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

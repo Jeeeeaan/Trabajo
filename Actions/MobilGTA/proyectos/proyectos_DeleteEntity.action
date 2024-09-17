@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "proyectos",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/GTAProyect/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

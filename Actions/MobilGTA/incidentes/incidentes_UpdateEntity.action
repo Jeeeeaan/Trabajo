@@ -1,0 +1,25 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "incidentes",
+        "Service": "/GTAProyect/Services/MobilGTA.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "ID": "#Control:ID/#Value",
+        "tipo": "#Control:tipo/#Value",
+        "contacto": "#Control:contacto/#Value",
+        "fecha_inicio": "#Control:fecha_inicio/#Value",
+        "fecha_fin": "#Control:fecha_fin/#Value",
+        "ubicacion": "#Control:ubicacion/#Value",
+        "ciudad": "#Control:ciudad/#Value",
+        "observaciones": "#Control:observaciones/#Value",
+        "status": "#Control:status/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/GTAProyect/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/GTAProyect/Actions/UpdateEntityFailureMessage.action"
+}
